@@ -13,9 +13,26 @@
   align-items: center;
 }
 
+.UIContainer__legend {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+}
+
 .UIContainer button {
   max-width: 200px;
   margin-bottom: 12px;
+}
+
+.btnGreen {
+  background-color: #00ff00;
+}
+.btnOrange {
+  background-color: #ff9900;
+}
+.btnRed {
+  background-color: #ff0000;
 }
 
 .newGame {
