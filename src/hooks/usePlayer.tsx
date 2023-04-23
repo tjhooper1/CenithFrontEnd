@@ -5,8 +5,8 @@ import { PlayerPosition } from "../types/Player";
 // let's make a userPlayer Hook that controls movement and state of the player
 export const usePlayer = (initialPosition: PlayerPosition) => {
   const [playerPos, setPlayerPos] = useState<PlayerPosition>(initialPosition);
-  const [remainingHealth, setRemainingHealth] = useState<number>(200);
-  const [remainingMoves, setRemainingMoves] = useState<number>(450);
+  const [remainingHealth, setRemainingHealth] = useState<number>(100);
+  const [remainingMoves, setRemainingMoves] = useState<number>(250);
   const [gameWon, setGameWon] = useState<boolean>(false);
   const [gameOver, setGameOver] = useState<boolean>(false);
 

@@ -1,4 +1,13 @@
 :root {
+
+  /* variables */
+  --lava-color: #ff3f3f;
+  --mud-color: #9c5a33;
+  --speeder-color: #2a6fbd;
+  --blank-color: #1f1f1f;
+  --player-color: #821660;
+  --end-color: #00d700;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;

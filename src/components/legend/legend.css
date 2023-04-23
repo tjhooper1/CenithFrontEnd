@@ -1,0 +1,27 @@
+.UIContainer__legend {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    text-align: left;
+  }
+  
+  .blankLegend h3 {
+    color: #ffffff;
+  }
+  
+  .mudLegend h3 {
+    color: var(--mud-color);
+  }
+  
+  .lavaLegend h3 {
+    color: var(--lava-color);
+  }
+  
+  .speederLegend h3 {
+    color: var(--speeder-color);
+  }
+  
+  .UIContainer button {
+    max-width: 200px;
+    margin-bottom: 12px;
+  }

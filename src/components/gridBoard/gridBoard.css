@@ -1,17 +1,40 @@
 .grid {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .cell {
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Mud {
+  background-color: var(--mud-color);
+}
+
+.Lava {
+  background-color: var(--lava-color);
+}
+
+.Speeder {
+  background-color: var(--speeder-color);
+}
+
+.Blank {
+  background-color: var(--blank-color);
+}
+
+.End {
+    background-color: var(--end-color);
+}
+
+.playerCell {
+  background-color: var(--player-color);
 }

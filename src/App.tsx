@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import GridBoard from "./components/gridBoard/GridBoard";
+import GameOver from "./components/screens/gameOver/GameOver";
+import CurrentGame from "./components/screens/currentGame/CurrentGame";
 import { usePlayer } from "./hooks/usePlayer";
 import { buildGrid } from "./lib/gridHelpers";
 
-import "./App.css";
+import "./app.css";
 
 function App() {
   const {
@@ -44,8 +46,6 @@ function App() {
     }
   };
 
-  console.log("lets check", gameOver);
-
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
@@ -62,57 +62,22 @@ function App() {
     if (!gameOver && !gameWon) {
       return (
         <>
-          <div className="UIContainer">
-          <div className="UIContainer__legend">
-              <h3>Blank: <br/> health - 0 <br/> move - 1</h3>
-              <h3>Mud: <br/> health - 10 <br/> moves - 0</h3>
-              <h3>Lava: <br/> health - 50 <br/> moves - 10</h3>
-              <h3>Speeder: <br/> health - 5 <br/> moves - 0</h3>
-            </div>
-            <h1>Health: {remainingHealth}</h1>
-            <h1>Remaining Moves: {remainingMoves}</h1>
-            <h2>New Game:</h2>
-            <div className="newGame">
-              <button className="btnGreen" onClick={() => resetGame(5)}>Easy</button>
-              <button className="btnOrange" onClick={() => resetGame(10)}>Medium</button>
-              <button className="btnRed" onClick={() => resetGame(20)}>Hard</button>
-            </div>
-          </div>
+          <CurrentGame
+            remainingHealth={remainingHealth}
+            remainingMoves={remainingMoves}
+            resetGame={resetGame}
+          />
           <GridBoard grid={grid} PlayerPos={playerPos} />
         </>
       );
     } else if (gameWon) {
-      return (
-        <>
-          <h1>You Won!</h1>
-          <h2>New Game:</h2>
-          <div className="newGame__lostScreen">
-            <button className="btnGreen" onClick={() => resetGame(5)}>Easy</button>
-            <button className="btnOrange" onClick={() => resetGame(10)}>Medium</button>
-            <button className="btnRed" onClick={() => resetGame(20)}>Hard</button>
-          </div>
-        </>
-      );
+      return <GameOver title="You Won!" resetGame={resetGame} />;
     } else {
-      return (
-        <>
-          <h1>You Lost!</h1>
-          <h2>New Game:</h2>
-          <div className="newGame__lostScreen">
-            <button className="btnGreen" onClick={() => resetGame(5)}>Easy</button>
-            <button className="btnOrange" onClick={() => resetGame(10)}>Medium</button>
-            <button className="btnRed" onClick={() => resetGame(20)}>Hard</button>
-          </div>
-        </>
-      );
+      return <GameOver title="You Lost!" resetGame={resetGame} />;
     }
   }
 
-  return (
-    <div className="App">
-      {renderScreen()}
-    </div>
-  );
+  return <div className="App">{renderScreen()}</div>;
 }
 
 export default App;

@@ -13,17 +13,7 @@
   align-items: center;
 }
 
-.UIContainer__legend {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  text-align: left;
-}
 
-.UIContainer button {
-  max-width: 200px;
-  margin-bottom: 12px;
-}
 
 .btnGreen {
   background-color: #00ff00;
@@ -41,8 +31,4 @@
   justify-content: space-between;
 }
 
-.newGame__lostScreen {
-  display: flex;
-  width: 80vw;
-  justify-content: space-between;
-}
+
