@@ -26,7 +26,7 @@ You can also run cypress tests to test UI components.
 ## How to Play
 To play the game, use the arrow keys on your keyboard to move the player. Each time the player moves to a new cell, their health and move count are updated based on the state of the cell. The rules for each cell state are as follows:
 
-- Blank: No effect on health or moves.
+- Blank: No effect on health but reduces moves by 1.
 - Speeder: Reduces health by 5, but does not affect moves.
 - Lava: Reduces health by 50 and moves by 10.
 - Mud: Reduces health by 10 and moves by 5.
