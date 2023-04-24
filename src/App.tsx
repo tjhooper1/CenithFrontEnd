@@ -24,7 +24,6 @@ function App() {
 
   // onKeyDownListener for player movement
   const handleKeyDown = (e: KeyboardEvent) => {
-    console.log(e.key);
     switch (e.key) {
       case "ArrowLeft":
         move(-1, 0, grid);
