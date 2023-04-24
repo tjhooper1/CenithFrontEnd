@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test": "vitest --environment jsdom",
     "test:cy": "cypress open",
-    "test:cy-run": "cypress run, --headless --browser chrome"
+    "test:cy-run": "cypress run"
   },
   "dependencies": {
     "@testing-library/react-hooks": "^8.0.1",
