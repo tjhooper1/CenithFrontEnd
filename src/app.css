@@ -12,23 +12,3 @@
   text-align: center;
   align-items: center;
 }
-
-
-
-.btnGreen {
-  background-color: #00ff00;
-}
-.btnOrange {
-  background-color: #ff9900;
-}
-.btnRed {
-  background-color: #ff0000;
-}
-
-.newGame {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-
