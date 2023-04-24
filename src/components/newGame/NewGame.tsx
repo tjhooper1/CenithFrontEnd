@@ -7,7 +7,7 @@ interface NewGameProps {
 
 const NewGame: React.FC<NewGameProps> = ({ resetGame }) => {
     return (
-        <div className="newGame">
+        <div className="newGameBtns">
         <NewGameButton
           btnColor="green"
           difficultyName="Easy"

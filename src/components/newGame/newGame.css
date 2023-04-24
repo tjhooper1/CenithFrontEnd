@@ -1,5 +1,5 @@
-.newGame {
+.newGameBtns {
     display: flex;
-    width: 80vw;
+    width: 20vw;
     justify-content: space-between;
   }

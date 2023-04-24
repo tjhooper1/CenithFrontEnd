@@ -48,6 +48,48 @@ describe("usePlayer", () => {
     expect(result.current.gameWon).toEqual(false);
   });
 
+  it("should move player to the left", () => {
+    const { result } = renderHook(() => usePlayer({ x: 1, y: 0 }));
+
+    act(() => {
+      result.current.move(-1, 0, grid);
+    });
+
+    expect(result.current.playerPos).toEqual({ x: 0, y: 0 });
+    expect(result.current.remainingHealth).toEqual(100);
+    expect(result.current.remainingMoves).toEqual(249);
+    expect(result.current.gameOver).toEqual(false);
+    expect(result.current.gameWon).toEqual(false);
+  });
+
+  it("should move player up", () => {
+    const { result } = renderHook(() => usePlayer({ x: 0, y: 1 }));
+
+    act(() => {
+      result.current.move(0, -1, grid);
+    });
+
+    expect(result.current.playerPos).toEqual({ x: 0, y: 0 });
+    expect(result.current.remainingHealth).toEqual(100);
+    expect(result.current.remainingMoves).toEqual(249);
+    expect(result.current.gameOver).toEqual(false);
+    expect(result.current.gameWon).toEqual(false);
+  });
+
+  it("should move player down", () => {
+    const { result } = renderHook(() => usePlayer(initialPosition));
+
+    act(() => {
+      result.current.move(0, 1, grid);
+    });
+
+    expect(result.current.playerPos).toEqual({ x: 0, y: 1 });
+    expect(result.current.remainingHealth).toEqual(100);
+    expect(result.current.remainingMoves).toEqual(249);
+    expect(result.current.gameOver).toEqual(false);
+    expect(result.current.gameWon).toEqual(false);
+  });
+
   it("should not let player go out of bounds", () => {
     const { result } = renderHook(() => usePlayer(initialPosition));
     act(() => {
